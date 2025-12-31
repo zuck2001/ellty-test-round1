@@ -1,0 +1,168 @@
+/* Global layout ---------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  background: #f2f2f2;
+  color: #4f5058;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+/* Modal ------------------------------------------------------------------ */
+.pages-modal {
+  width: 370px;
+  height: 326px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #eeeeee;
+  padding: 10px 20px;
+  box-shadow:
+    0 8px 15px rgba(20, 20, 20, 0.12),
+    0 0 4px rgba(20, 20, 20, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pages-modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+/* Rows ------------------------------------------------------------------- */
+.pages-modal__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  min-height: 34px;
+}
+
+.pages-modal__row--head {
+  padding-top: 4px;
+}
+
+.pages-modal__label {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #6c6c6c;
+}
+
+.pages-modal__divider {
+  height: 1px;
+  background: #eeeeee;
+  margin: 2px 0 0;
+}
+
+/* Checkbox --------------------------------------------------------------- */
+.checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.checkbox__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkbox__box {
+  width: 17px;
+  height: 17px;
+  border-radius: 3px;
+  border: 1px solid #d5d5d5;
+  background-color: #f8f8f8;
+  display: inline-block;
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    box-shadow 0.15s ease;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.checkbox:hover .checkbox__box {
+  border-color: #c7cbd2;
+  box-shadow: 0 0 0 2px rgba(43, 110, 227, 0.08);
+}
+
+.checkbox__input:focus-visible + .checkbox__box {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(43, 110, 227, 0.14);
+}
+
+.checkbox__input:checked + .checkbox__box {
+  background-color: #2b6ee3;
+  border-color: #2b6ee3;
+  box-shadow: 0 1px 2px rgba(43, 110, 227, 0.32);
+}
+
+.checkbox__input:checked + .checkbox__box::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(-45deg);
+  top: 4px;
+  left: 4px;
+}
+
+/* Button ----------------------------------------------------------------- */
+.primary-btn {
+  margin-top: 4px;
+  width: 100%;
+  height: 32px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background-color: #ffc525;
+  color: #3f3f46;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease,
+    transform 0.05s ease;
+  box-shadow: 0 6px 12px rgba(245, 182, 25, 0.2);
+}
+
+.primary-btn:hover {
+  background-color: #f5b619;
+  box-shadow: 0 8px 14px rgba(245, 182, 25, 0.24);
+}
+
+.primary-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 6px 10px rgba(245, 182, 25, 0.2);
+}
+
+@media (max-width: 420px) {
+  .pages-modal {
+    width: 100%;
+    padding: 16px 18px 14px;
+  }
+}

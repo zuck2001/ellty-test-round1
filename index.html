@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ellty - Pages Selector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="pages-modal" aria-label="Page selection dialog">
+        <header class="pages-modal__row pages-modal__row--head">
+          <span class="pages-modal__label">All pages</span>
+          <label class="checkbox">
+            <input
+              type="checkbox"
+              class="checkbox__input"
+              id="all-pages"
+            />
+            <span class="checkbox__box"></span>
+          </label>
+        </header>
+
+        <div class="pages-modal__divider"></div>
+
+        <div class="pages-modal__body">
+          <div class="pages-modal__row" data-page="1">
+            <span class="pages-modal__label">Page 1</span>
+            <label class="checkbox">
+              <input
+                type="checkbox"
+                class="checkbox__input page-checkbox"
+                data-page="1"
+              />
+              <span class="checkbox__box"></span>
+            </label>
+          </div>
+
+          <div class="pages-modal__row" data-page="2">
+            <span class="pages-modal__label">Page 2</span>
+            <label class="checkbox">
+              <input
+                type="checkbox"
+                class="checkbox__input page-checkbox"
+                data-page="2"
+              />
+              <span class="checkbox__box"></span>
+            </label>
+          </div>
+
+          <div class="pages-modal__row" data-page="3">
+            <span class="pages-modal__label">Page 3</span>
+            <label class="checkbox">
+              <input
+                type="checkbox"
+                class="checkbox__input page-checkbox"
+                data-page="3"
+              />
+              <span class="checkbox__box"></span>
+            </label>
+          </div>
+
+          <div class="pages-modal__row" data-page="4">
+            <span class="pages-modal__label">Page 4</span>
+            <label class="checkbox">
+              <input
+                type="checkbox"
+                class="checkbox__input page-checkbox"
+                data-page="4"
+              />
+              <span class="checkbox__box"></span>
+            </label>
+          </div>
+        </div>
+
+        <button class="primary-btn" type="button">Done</button>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
